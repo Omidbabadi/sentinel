@@ -1,0 +1,33 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:get_it/get_it.dart';
+import 'package:sentinel/core/common/application/cache_helper.dart';
+import 'package:sentinel/core/security/credential_store.dart';
+import 'package:sentinel/core/storage/app_database.dart';
+import 'package:sentinel/src/groups/data/datasrc/group_local_datasrc.dart';
+import 'package:sentinel/src/groups/data/repositories_impl/group_repository_impl.dart';
+import 'package:sentinel/src/groups/domain/repositories/group_repository.dart';
+import 'package:sentinel/src/groups/domain/usecases/add_group.dart';
+import 'package:sentinel/src/groups/domain/usecases/assign_hosts_to_group.dart';
+import 'package:sentinel/src/groups/domain/usecases/delete_group.dart';
+import 'package:sentinel/src/groups/domain/usecases/get_groups.dart';
+import 'package:sentinel/src/groups/domain/usecases/update_group.dart';
+import 'package:sentinel/src/hosts/data/datasrc/host_local_datasrc.dart';
+import 'package:sentinel/src/hosts/data/repositories_impl/host_repository_impl.dart';
+import 'package:sentinel/src/hosts/domain/repositories/host_repository.dart';
+import 'package:sentinel/src/hosts/domain/usecases/add_host.dart';
+import 'package:sentinel/src/hosts/domain/usecases/delete_host.dart';
+import 'package:sentinel/src/hosts/domain/usecases/get_hosts.dart';
+import 'package:sentinel/src/hosts/domain/usecases/ping_al_host.dart';
+import 'package:sentinel/src/hosts/domain/usecases/update_host.dart';
+import 'package:sentinel/src/ssh/data/datasrc/ssh_datasrc.dart';
+import 'package:sentinel/src/ssh/data/repositories/ssh_repository_impl.dart';
+import 'package:sentinel/src/ssh/domain/repositories/ssh_repository.dart';
+import 'package:sentinel/src/ssh/domain/usecase/connect.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../src/hosts/domain/usecases/ping_a_hosts.dart';
+import '../common/internet_conectivity.dart';
+import '../handler/host_key_prompts_handler.dart';
+
+part 'injection_container.main.dart';
